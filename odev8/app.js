@@ -3,15 +3,8 @@ const ejs=require('ejs');
 const path=require('path');
 const app=express();
 
-// template engine
-
 app.set('view engine','ejs');
-
-// Middleware
 app.use(express.static('public'));
-
-
-//routes
 app.get('/',(req,res)=>{
     res.render('index');
 });
